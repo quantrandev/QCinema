@@ -1,0 +1,111 @@
+/*form element*/
+
+/*end form element*/
+
+@font-face {
+    font-family: heading;
+    src: url(../../../font/Asap_Condensed/AsapCondensed-Medium.ttf);
+}
+
+.tooltip {
+    max-width: 100px;
+}
+
+.tooltip>.tooltip-inner {
+    padding: 5px;
+}
+
+a.sidebar-toggle:hover {
+    background-color: #f10e38 !important;
+}
+
+.main-sidebar {
+    background-color: #fff !important;
+    box-shadow: 1px 0px 20px rgba(0, 0, 0, 0.08);
+}
+
+.navbar {
+    background-color: #f33155 !important;
+    box-shadow: 0px 1px 20px rgba(0, 0, 0, 0.08);
+}
+
+.main-header .logo {
+    background-color: #f33155 !important;
+    font-family: heading;
+}
+
+.user-header {
+    background-color: #f33155 !important;
+}
+
+.user-panel .info {
+    color: #000 !important;
+    font-family: heading;
+}
+
+.user-panel .info a {
+    color: #000 !important;
+}
+
+.sidebar-menu .header {
+    background-color: #fff !important;
+}
+
+.sidebar-menu li a {
+    color: #000 !important;
+    font-family: heading;
+}
+
+.sidebar-menu li a:hover {
+    background-color: #f2f2f2 !important;
+}
+
+.sidebar-menu li.menu-open a {
+    background-color: #f2f2f2 !important;
+}
+
+.sidebar-menu li .treeview-menu {
+    background-color: #e6e6e6 !important;
+}
+
+.sidebar-menu li.active>a {
+    background-color: #e6e6e6 !important;
+    border-left-color: #f33155 !important;
+}
+
+.sidebar-form {
+    border: 2px solid #f33155 !important;
+}
+
+.sidebar-form input[type="text"] {
+    background-color: #fff !important;
+}
+
+.sidebar-form .btn {
+    background-color: #f2f2f2 !important;
+}
+
+.box-primary {
+    border-color: #f33155 !important;
+}
+
+
+/*button*/
+
+.btn-rounded {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: none;
+}
+
+.btn-rounded:focus {
+    outline: none;
+}
+
+
+/*authorization*/
+
+#js-tbl-authorization tbody tr td:last-child {
+    text-align: center;
+}
