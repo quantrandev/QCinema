@@ -205,11 +205,18 @@
     <Compile Include="Migrations\201710140823187_InitialModels.Designer.cs">
       <DependentUpon>201710140823187_InitialModels.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201710140917295_AddMovieAndGenreAndFilmFormat.cs" />
+    <Compile Include="Migrations\201710140917295_AddMovieAndGenreAndFilmFormat.Designer.cs">
+      <DependentUpon>201710140917295_AddMovieAndGenreAndFilmFormat.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationUser.cs" />
+    <Compile Include="Models\FilmFormat.cs" />
+    <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Movie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -2917,6 +2924,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201710140823187_InitialModels.resx">
       <DependentUpon>201710140823187_InitialModels.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710140917295_AddMovieAndGenreAndFilmFormat.resx">
+      <DependentUpon>201710140917295_AddMovieAndGenreAndFilmFormat.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
