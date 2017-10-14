@@ -42,15 +42,23 @@
     <script type="text/javascript" src="/Content/plugins/bower_components/multiselect/js/jquery.multi-select.js"></script>
     <!-- Date Picker Plugin JavaScript -->
     <script src="/Content/plugins/bower_components/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+    <script>
+        $(function() {
+            $("#ReleasedDate").datepicker({
+                format: "dd/mm/yyyy",
+                autoclose: true
+            });
+        });
+    </script>
 }
 <div class="row">
     <div class="col-xs-12 col-lg-6">
         <div class="white-box">
-            @using (Html.BeginForm("Create", "Movie", FormMethod.Get, new { @data_toggle = "validator", @enctype = "multipart/form-data" }))
+            @using (Html.BeginForm("Create", "Movie", FormMethod.Post, new { @data_toggle = "validator", @enctype = "multipart/form-data" }))
             {
                 <div class="form-group">
                     <label>Tên phim (Tiếng Việt) *</label>
-                    @Html.TextBoxFor(model => model.TitleVi, new { @class = "form-control", @placeholder = "Nhập tên phim bằng tiếng Việt", @required = "required" })
+                    @Html.TextBoxFor(model => model.TitleVi, new { @class = "form-control", @placeholder = "Nhập tên phim bằng tiếng Việt", @required = "required", @autofocus = "autofocus" })
                 </div>
                 <div class="form-group">
                     <label>Tên phim (Tiếng Anh)</label>
@@ -78,8 +86,12 @@
                     @Html.TextBoxFor(model => model.Casts, new { @class = "form-control", @data_role = "tagsinput", @placeholder = "Tên diễn viên" })
                 </div>
                 <div class="form-group">
+                    <label>Ngày khởi chiếu</label>
+                    @Html.TextBoxFor(model => model.ReleasedDate, new { @class = "form-control", @placeholder = "dd/mm/yyyy" })
+                </div>
+                <div class="form-group">
                     <label>Thể loại</label>
-                    <select class="selectpicker" data-style="form-control" multiple="multiple" id="Genres" name="Genres">
+                    <select class="selectpicker" data-style="form-control" multiple="multiple" id="SelectedGenres" name="SelectedGenres">
                         @foreach (var genre in genres)
                         {
                             <option value="@genre.Id">@genre.Name</option>
@@ -88,7 +100,7 @@
                 </div>
                 <div class="form-group">
                     <label>Định dạng</label>
-                    <select class="selectpicker" data-style="form-control" multiple="multiple" id="FilmFormats" name="FilmFormats">
+                    <select class="selectpicker" data-style="form-control" multiple="multiple" id="SelectedFilmFormats" name="SelectedFilmFormats">
                         @foreach (var filmformat in filmFormats)
                         {
                             <option value="@filmformat.Id">@filmformat.Name</option>

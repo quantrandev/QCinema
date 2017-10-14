@@ -7,6 +7,10 @@ namespace QCinema.Models
 {
     public class Movie
     {
+        public Movie()
+        {
+            CreatedDate = DateTime.Now;
+        }
         public int Id { get; set; }
         public string TitleVi { get; set; }
         public string TitleEn { get; set; }
@@ -20,5 +24,11 @@ namespace QCinema.Models
         public string CreatedBy { get; set; }
         public ICollection<Genre> Genres { get; set; }
         public ICollection<FilmFormat> FilmFormats { get; set; }
+
+        public void UploadImage(HttpPostedFileBase postedFile, string path)
+        {
+            postedFile.SaveAs(path);
+            Image = path;
+        }
     }
 }

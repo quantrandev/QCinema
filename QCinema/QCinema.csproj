@@ -2946,6 +2946,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Models\" />
     <Folder Include="Content\plugins\bower_components\etc\" />
+    <Folder Include="Images\Movies\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
