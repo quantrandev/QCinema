@@ -1,0 +1,84 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>_Layout</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Menu CSS -->
+    <!-- toast CSS -->
+    <link href="/Content/plugins/bower_components/toast-master/css/jquery.toast.css" rel="stylesheet">
+    <!-- morris CSS -->
+    <link href="/Content/plugins/bower_components/morrisjs/morris.css" rel="stylesheet">
+    <!-- Calendar CSS -->
+    <link href="/Content/plugins/bower_components/calendar/dist/fullcalendar.css" rel="stylesheet" />
+    <!-- animation CSS -->
+    <link href="/Content/css/animate.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="/Content/css/style.css" rel="stylesheet">
+    <!-- color CSS -->
+    <link href="/Content/css/colors/default.css" id="theme" rel="stylesheet">
+
+    @RenderSection("page_custom_style", false)
+</head>
+<body>
+
+    <div id="wrapper">
+        <!-- Topbar header - style you can find in pages.scss -->
+        @Html.Partial("TopMostNav")
+        <!-- End Top Navigation -->
+        <!-- Left Sidebar - style you can find in sidebar.scss  -->
+        @Html.Partial("Sidebar")
+        <!-- End Left Sidebar -->
+        <!-- Page Content -->
+        <div id="page-wrapper">
+            <div class="container-fluid">
+                <div class="row bg-title">
+                    @RenderSection("page_header", true)
+                    <!-- /.col-lg-12 -->
+                </div>
+                @RenderBody()
+            </div>
+            <!-- /.container-fluid -->
+            <footer class="footer text-center"></footer>
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Page Content -->
+        <!-- ============================================================== -->
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Wrapper -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- All Jquery -->
+    <!-- ============================================================== -->
+    <script src="/Content/plugins/bower_components/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/Content/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- Menu Plugin JavaScript -->
+    <script src="/Content/plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.js"></script>
+    <!--slimscroll JavaScript -->
+    <script src="/Content/js/jquery.slimscroll.js"></script>
+    <!--Wave Effects -->
+    <script src="/Content/js/waves.js"></script>
+    <!--Counter js -->
+    <script src="/Content/plugins/bower_components/waypoints/lib/jquery.waypoints.js"></script>
+    <script src="/Content/plugins/bower_components/counterup/jquery.counterup.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="/Content/js/custom.min.js"></script>
+    <script src="/Content/js/dashboard1.js"></script>
+
+    <script src="/Content/plugins/bower_components/toast-master/js/jquery.toast.js"></script>
+    <!--Style Switcher -->
+    <script src="/Content/plugins/bower_components/styleswitcher/jQuery.style.switcher.js"></script>
+
+    @RenderSection("page_custom_js", false)
+</body>
+</html>
