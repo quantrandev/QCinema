@@ -44,6 +44,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper, Version=6.1.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.6.1.1\lib\net45\AutoMapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.AI.Agent.Intercept, Version=2.0.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.0.6\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
       <Private>True</Private>
@@ -193,9 +197,12 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\IdentityConfig.cs" />
+    <Compile Include="App_Start\MappingProfile.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\MovieController.cs" />
+    <Compile Include="Areas\Admin\ViewModels\MovieViewModel.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -275,6 +282,10 @@
     <Content Include="Content\css\spinners.css" />
     <Content Include="Content\css\step-box.css" />
     <Content Include="Content\css\style.css" />
+    <Content Include="Content\fonts\Asap_Condensed\OFL.txt" />
+    <Content Include="Content\fonts\Baloo_Bhaijaan\OFL.txt" />
+    <Content Include="Content\fonts\cabin-sketch-v1.02\OFL.txt" />
+    <Content Include="Content\fonts\cagliostro\OFL.txt" />
     <Content Include="Content\js\calendarController.js" />
     <Content Include="Content\js\cbpFWTabs.js" />
     <Content Include="Content\js\chat.js" />
@@ -2867,6 +2878,23 @@
     <Content Include="Areas\Admin\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\Admin\Views\Shared\TopMostNav.cshtml" />
     <Content Include="Areas\Admin\Views\Shared\Sidebar.cshtml" />
+    <Content Include="Areas\Admin\Views\Movie\Create.cshtml" />
+    <Content Include="Content\fonts\Asap_Condensed.zip" />
+    <Content Include="Content\fonts\Asap_Condensed\AsapCondensed-Bold.ttf" />
+    <Content Include="Content\fonts\Asap_Condensed\AsapCondensed-BoldItalic.ttf" />
+    <Content Include="Content\fonts\Asap_Condensed\AsapCondensed-Italic.ttf" />
+    <Content Include="Content\fonts\Asap_Condensed\AsapCondensed-Medium.ttf" />
+    <Content Include="Content\fonts\Asap_Condensed\AsapCondensed-MediumItalic.ttf" />
+    <Content Include="Content\fonts\Asap_Condensed\AsapCondensed-Regular.ttf" />
+    <Content Include="Content\fonts\Asap_Condensed\AsapCondensed-SemiBold.ttf" />
+    <Content Include="Content\fonts\Asap_Condensed\AsapCondensed-SemiBoldItalic.ttf" />
+    <Content Include="Content\fonts\Baloo_Bhaijaan.zip" />
+    <Content Include="Content\fonts\Baloo_Bhaijaan\BalooBhaijaan-Regular.ttf" />
+    <Content Include="Content\fonts\cabin-sketch-v1.02\CabinSketch-Bold.ttf" />
+    <Content Include="Content\fonts\cabin-sketch-v1.02\CabinSketch-Regular.ttf" />
+    <Content Include="Content\fonts\cabin-sketch.zip" />
+    <Content Include="Content\fonts\cagliostro.zip" />
+    <Content Include="Content\fonts\cagliostro\Cagliostro-Regular.ttf" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -2916,7 +2944,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\Admin\Controllers\" />
     <Folder Include="Areas\Admin\Models\" />
     <Folder Include="Content\plugins\bower_components\etc\" />
   </ItemGroup>

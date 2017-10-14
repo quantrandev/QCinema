@@ -1,4 +1,4 @@
-/*!
+﻿/*!
 Template Name : Ample Admin - The Ultimate Dashboad Template
 Author : WrapPixel (http://www.wrappixel.com)
  */
@@ -39,11 +39,6 @@ Author : WrapPixel (http://www.wrappixel.com)
 
 * {
     outline: none !important;
-}
-
-@font-face {
-    font-family: heading-vi;
-    src: url(../../font/Asap_Condensed/AsapCondensed-Regular.ttf);
 }
 
 body {
